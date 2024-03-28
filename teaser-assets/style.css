@@ -52,7 +52,7 @@ a{
     margin-top: 40vh;
     mix-blend-mode: difference;
     color: yellow;
-    letter-spacing: .2rem;
+    letter-spacing: .63rem;
 }
 
 
@@ -117,6 +117,42 @@ footer{
     position: absolute;
     max-width: 5vw;
     height: auto;
-    z-index: -1;
+    z-index: 99;
     box-shadow: 0 0 20px 1px rgba(68, 68, 68, 0.6);
+}
+
+@media screen and (max-width: 768px){
+    body{
+        width: 80vw;
+        overflow-x: hidden;
+    }
+
+    .container{
+        height: 10vh;
+    }
+
+    .nullText{
+        font-size: 1.5rem;
+        letter-spacing: .4rem;
+        height: 10vh;
+    }
+
+    .sub_text{
+        display: none;
+    }
+
+    footer{
+        width: 50vw;
+        bottom: 7dvh;
+        left: 20px;
+    }
+
+    .footer_container{
+        display: block;
+        font-size: 0.7rem;
+    }
+
+    .footer_container .sign_in{
+        margin-bottom: 1vh;
+    }
 }
