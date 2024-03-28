@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Asfalt';
+    src: url('./assets/fonts/ABCAsflatVariableVF-Trial.woff');
+}
+
+@font-face {
+    font-family: 'Monument';
+    src: url("./assets/fonts/ABCMonumentGroteskMono-Regular-Trial.otf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: blue;
+    --fontColor: white;
+    --blendColor: yellow;
+}  
+
+::selection,
+::-moz-selection { 
+    color: white;
+    background: blue;
+}
+
+body{
+    font-family: sans-serif;
+    font-family: Monument;
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.nullText{
+    font-family: 'Asfalt';
+    font-size: 5rem;    
+    font-variation-settings: "wght" 300, "ital" 0;
+    transition: font-variation-settings 0.3s ease;
+    text-align: center;
+    width: 100vw;
+    margin-top: 40vh;
+    mix-blend-mode: difference;
+    color: white;
+    letter-spacing: .2rem;
+}
+
+
+.sub_text{
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: .2rem;
+    color: var(--fontColor);
+    text-transform: uppercase;
+    mix-blend-mode: exclusion;
+    color: var(--blendColor);
+}
+
+.nullText:hover{
+    font-variation-settings: "wght" 700, "ital" 12;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 10vh;
+}
+
+.footer_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    width: 97%;
+    height: 100%;
+}
+
+.footer_container .counter{
+    padding: 10px 20px;
+    background-color: var(--fontColor);
+    color: var(--background);
+    border-radius: 50px;
+}
+
+.footer_container .sign_in{
+    border: 1px solid var(--fontColor);
+    color: var(--fontColor);
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    background-color: var(--background);
+}
+
+.footer_container .sign_in:hover{
+    background-color: var(--fontColor);
+    color: var(--background);
+}
+
+.image{
+    position: absolute;
+    max-width: 15vw;
+    height: auto;
+    z-index: -1;
+    box-shadow: 0 0 20px 1px rgba(68, 68, 68, 0.6);
+}
