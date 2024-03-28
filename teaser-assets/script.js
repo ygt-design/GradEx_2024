@@ -87,6 +87,11 @@ $(document).ready(function () {
   }
 
   function addHoverEffect() {
+    // Apply the transition effect to all images
+    $(".image").css({
+      transition: "transform 0.3s ease, z-index 0.3s ease",
+    });
+
     $(".image").hover(
       function () {
         // Mouse enter
