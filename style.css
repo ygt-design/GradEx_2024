@@ -47,7 +47,7 @@ body{
     width: 100vw;
     margin-top: 40vh;
     mix-blend-mode: difference;
-    color: white;
+    color: yellow;
     letter-spacing: .2rem;
 }
 
@@ -111,7 +111,7 @@ footer{
 
 .image{
     position: absolute;
-    max-width: 15vw;
+    max-width: 5vw;
     height: auto;
     z-index: -1;
     box-shadow: 0 0 20px 1px rgba(68, 68, 68, 0.6);

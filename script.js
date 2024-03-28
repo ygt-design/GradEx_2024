@@ -3,14 +3,18 @@ $(document).ready(function () {
   let baseUrl = "https://2024.ocadu.gd";
 
   $.getJSON(jsonUrl, function (data) {
+    $("#uploaded").text(data.length)
     $.each(data, function (index, item) {
+      
       let fullImageUrl = `${baseUrl}${item.field_thumbnail_image}`;
+      speedX = Math.floor(Math.random()*2)+1
+      speedY = Math.floor(Math.random()*2)+1
       $(".container").append(
-        `<div class="image-wrapper"><img src="${fullImageUrl}" alt="Thumbnail" class="image" data-pos-x="0" data-pos-y="0" data-speed-x="3" data-speed-y="3"></div>`
+        `<div class="image-wrapper"><img src="${fullImageUrl}" alt="Thumbnail" class="image" data-pos-x="0" data-pos-y="0" data-speed-x="${speedX}" data-speed-y="${speedX}"></div>`
       );
     });
     animateImages();
-    addHoverEffect();
+    // addHoverEffect();
   });
 
   function animateImages() {
