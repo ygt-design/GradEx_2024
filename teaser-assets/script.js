@@ -104,7 +104,6 @@ $(document).ready(function () {
           zIndex: "auto", // Reset the z-index
         });
 
-        // Trigger the custom event to restart the animation
         $(this).trigger("restartAnimation");
       }
     );

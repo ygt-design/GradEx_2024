@@ -50,8 +50,7 @@ a{
     text-align: center;
     width: 100vw;
     margin-top: 40vh;
-    mix-blend-mode: difference;
-    color: yellow;
+    color: white;
     letter-spacing: .63rem;
 }
 
@@ -63,8 +62,6 @@ a{
     letter-spacing: .2rem;
     color: var(--fontColor);
     text-transform: uppercase;
-    mix-blend-mode: exclusion;
-    color: var(--blendColor);
 }
 
 .nullText:hover{
@@ -119,6 +116,7 @@ footer{
     height: auto;
     z-index: 99;
     box-shadow: 0 0 20px 1px rgba(68, 68, 68, 0.6);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px){
