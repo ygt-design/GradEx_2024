@@ -18,18 +18,16 @@ $(document).ready(function () {
       let $this = $(this);
 
       function move() {
-        if ($this.hasClass("paused")) return; // Skip movement if paused
+        if ($this.hasClass("paused")) return;
 
-        // Retrieve position and speed from data attributes
         let posX = parseFloat($this.data("pos-x"));
         let posY = parseFloat($this.data("pos-y"));
         let speedX = parseFloat($this.data("speed-x"));
         let speedY = parseFloat($this.data("speed-y"));
 
-        posX += Math.random(window.innerWidth) * speedX;
-        posY += Math.random(window.innerHeight) * speedY;
+        posX += speedX;
+        posY += speedY;
 
-        // Boundary checks and speed direction reversal
         if (posX <= 0 || posX >= $(window).width() - $this.width()) {
           speedX = -speedX;
           $this.data("speed-x", speedX);
@@ -39,7 +37,6 @@ $(document).ready(function () {
           $this.data("speed-y", speedY);
         }
 
-        // Update position in data attributes
         $this.data("pos-x", posX);
         $this.data("pos-y", posY);
 
