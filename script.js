@@ -17,6 +17,23 @@ $(document).ready(function () {
     $(".image").each(function () {
       let $this = $(this);
 
+      // Determine maximum x and y positions
+      let maxX = $(window).width() - $this.width();
+      let maxY = $(window).height() - $this.height();
+
+      // Set random starting positions
+      let startPosX = Math.random() * maxX;
+      let startPosY = Math.random() * maxY;
+
+      $this.data("pos-x", startPosX);
+      $this.data("pos-y", startPosY);
+
+      // Update CSS for starting position
+      $this.css({
+        top: startPosY,
+        left: startPosX,
+      });
+
       function move() {
         if ($this.hasClass("paused")) return;
 
