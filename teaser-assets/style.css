@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Asfalt';
-    src: url('./assets/fonts/ABCAsflatVariableVF-Trial.woff');
+    src: url('fonts/ABCAsflatVariableVF-Trial.woff');
 }
 
 @font-face {
     font-family: 'Monument';
-    src: url("./assets/fonts/ABCMonumentGroteskMono-Regular-Trial.otf");
+    src: url("fonts/ABCMonumentGroteskMono-Regular-Trial.otf");
 }
 
 *{
